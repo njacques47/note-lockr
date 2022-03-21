@@ -8,18 +8,24 @@ const PORT = process.env.PORT || 3001;
 const app = express();
 
 
+// middleware for incoming data & static files
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.static(path.join(__dirname, '/public'))); 
+
+
 // GET index.html route
 app.get('/', (req, res) => {
-  //
+  res.sendFile('index.html')
 });
 
 // GET notes.html route
-app.get('/', (req, res) => {
+app.get('/notes', (req, res) => {
   //
 });
 
 // GET /api/notes route and return saved from db.json
-app.get('/', (req, res) => {
+app.get('/api/notes', (req, res) => {
   //
 });
 
