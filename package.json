@@ -1,14 +1,22 @@
 {
-  "name": "note-taker",
+  "name": "note-lockr",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/njacques47/note-lockr.git"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "dotenv": "^16.0.0",
+    "express": "^4.16.4",
+    "nanoid": "^3.3.1"
   }
 }
