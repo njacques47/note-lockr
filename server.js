@@ -16,12 +16,12 @@ app.use(express.static(path.join(__dirname, '/public')));
 
 // GET index.html route
 app.get('/', (req, res) => {
-  res.sendFile('index.html')
+  res.sendFile(path.join(__dirname, './public/index.html'))
 });
 
 // GET notes.html route
 app.get('/notes', (req, res) => {
-  //
+  res.sendFile(path.join(__dirname, './public/notes.html'))
 });
 
 // GET /api/notes route and return saved from db.json
